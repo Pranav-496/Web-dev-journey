@@ -22,7 +22,7 @@
         product.newProperty = true;
         console.log(product); */
 
-        const product2 = {
+      /*  const product2 = {
             name: 'shirt',
             'delivery-time': '1 day',
             rating: {          //This is called nested object
@@ -44,9 +44,48 @@
         product2.fun(); // correct
         //function inside object example is console.log();
         console.log(typeof console.log); // this will print 'function'
-        console.log(JSON.stringify(product2)); //prints the object product2 except the functions in it at JSON do not support functions
+        console.log(JSON.stringify(product2)); //Converting JS object to JSON & prints the object product2 except the functions in it at JSON do not support functions
         const jsonString = JSON.stringify(product2);
-        JSON.parse(jsonString);
+        JSON.parse(jsonString);//Again converting JSON object to JS object*/
+        console.log('hello'.length); //This is a string method, it will print the length of the string 'hello' which is 5
+        console.log('hello'.toUpperCase()); //This is a string method, it will
+
+        const object1 = {
+            message: 'Hello World'
+        };
+
+        const object2 = object1 //This is called reference, both onject1 and onject2 are pointing to the same object in memory this is called copy by reference
+        object1.message = 'Good job!';
+        console.log(object1);
+        const object3 = {
+            message: 'Good job!'
+        };
+        console.log(object3 === object1); //This will print false as both objects are different in memory
+        console.log(object3 === object2); //This will print false as both objects are different in memory
+        console.log(object1 === object2); //This will print true as both objects are same
+
+        const object4 = {
+            message: 'Good job!',
+            price: 799
+        };
+        //const message = object4.message; //This will extract the message property from object4 and assign it to the variable message
+        const { message, price } = object4; //This is called destructuring, it will extract the message property from object4 and assign it to the variable message
+        console.log(message); //This will print 'Good job!'
+        console.log(price); //This will print 799
+
+        const object5 = {
+           // message: message
+           message //This is called shorthand property name, it will create a property with the same name as the variable
+           ,/*method: function func1() {
+                console.log('This is a method inside object5');
+            }*/
+            methdo(){
+                console.log('This is a method inside object5');
+            }
+        };
+        console.log(object5); //This will print { message: 'Good job!' }
+        console.method();
+
 </script>
 </body>
 

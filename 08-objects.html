@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        /*const product = {
+            name: 'socks',
+            price: 20
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        product.newProperty = true;
+        console.log(product); */
+
+        const product2 = {
+            name: 'shirt',
+            'delivery-time': '1 day',
+            rating: {          //This is called nested object
+                stars: 4.5,
+                count: 87
+            },
+            fun: function func1(){   //function inside object = method
+                console.log('Function inside object');
+            }
+        };
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']); //Bracket notation
+        console.log(product2['delivery-time']); //Bracket notation as js takes - as subtraction in normal one
+
+        console.log(product2.rating.count);
+        //product2.fun.func1(); wrong way
+        //product2.func1(); wrong way
+        product2.fun(); // correct
+        //function inside object example is console.log();
+        console.log(typeof console.log); // this will print 'function'
+        console.log(JSON.stringify(product2)); //prints the object product2 except the functions in it at JSON do not support functions
+        const jsonString = JSON.stringify(product2);
+        JSON.parse(jsonString);
+</script>
+</body>
+
+</html>

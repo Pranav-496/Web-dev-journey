@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DSA Learning App Feedback</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2e3c5d;
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin: 10px 0;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .section {
+      margin-top: 30px;
+      padding-top: 10px;
+      border-top: 2px solid #eee;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 32px;
+      font-size: 1rem;
+      color: white;
+      background: #4a148c;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #6a1b9a;
+    }
+
+    .footer-msg {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DSA Learning App Feedback</h1>
+
+    <form id="feedbackForm">
+
+      <!-- Section 1 -->
+      <div class="section">
+        <h2>🧑 Personal Information</h2>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" />
+        
+        <label for="level">Your current level of study</label>
+        <select id="level">
+          <option value="school">School</option>
+          <option value="ug">College (UG)</option>
+          <option value="pg">College (PG)</option>
+          <option value="working">Working Professional</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Current DSA Knowledge Level</label>
+        <div class="radio-group">
+          <input type="radio" name="knowledge" value="beginner" /> Beginner
+          <input type="radio" name="knowledge" value="intermediate" /> Intermediate
+          <input type="radio" name="knowledge" value="advanced" /> Advanced
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section">
+        <h2>📱 App Usage</h2>
+
+        <label>How often do you use the app?</label>
+        <div class="radio-group">
+          <input type="radio" name="usage" value="daily" /> Daily
+          <input type="radio" name="usage" value="weekly" /> Weekly
+          <input type="radio" name="usage" value="rarely" /> Rarely
+        </div>
+
+        <label>Which topics have you learned?</label>
+        <div class="checkbox-group">
+          <input type="checkbox" /> Arrays
+          <input type="checkbox" /> Strings
+          <input type="checkbox" /> Linked List
+          <input type="checkbox" /> Stack/Queue
+          <input type="checkbox" /> Trees/Graphs
+          <input type="checkbox" /> DP
+          <input type="checkbox" /> Sorting/Searching
+        </div>
+
+        <label>Rate content quality</label>
+        <select>
+          <option>⭐ Poor</option>
+          <option>⭐⭐ Average</option>
+          <option>⭐⭐⭐ Good</option>
+          <option>⭐⭐⭐⭐ Very Good</option>
+          <option>⭐⭐⭐⭐⭐ Excellent</option>
+        </select>
+
+        <label>Was the difficulty level appropriate?</label>
+        <div class="radio-group">
+          <input type="radio" name="difficulty" value="easy" /> Too easy
+          <input type="radio" name="difficulty" value="balanced" /> Balanced
+          <input type="radio" name="difficulty" value="hard" /> Too hard
+        </div>
+
+        <label>Which features do you use most?</label>
+        <div class="checkbox-group">
+          <input type="checkbox" /> Practice Problems
+          <input type="checkbox" /> Tutorials
+          <input type="checkbox" /> Code Editor
+          <input type="checkbox" /> Leaderboard
+          <input type="checkbox" /> Visualizations
+        </div>
+
+        <label>Have you faced any bugs or issues?</label>
+        <div class="radio-group">
+          <input type="radio" name="bugs" value="yes" /> Yes
+          <input type="radio" name="bugs" value="no" /> No
+        </div>
+        <textarea placeholder="If yes, describe the issue..."></textarea>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section">
+        <h2>📊 Learning Outcome</h2>
+
+        <label>Did your understanding of DSA improve?</label>
+        <div class="radio-group">
+          <input type="radio" name="improve" value="significantly" /> Yes, significantly
+          <input type="radio" name="improve" value="slightly" /> Yes, slightly
+          <input type="radio" name="improve" value="no" /> No
+        </div>
+
+        <label>Do you feel more confident solving problems?</label>
+        <div class="radio-group">
+          <input type="radio" name="confident" value="yes" /> Yes
+          <input type="radio" name="confident" value="no" /> No
+          <input type="radio" name="confident" value="somewhat" /> Somewhat
+        </div>
+
+        <label>Would you recommend this app?</label>
+        <div class="radio-group">
+          <input type="radio" name="recommend" value="yes" /> Definitely
+          <input type="radio" name="recommend" value="maybe" /> Maybe
+          <input type="radio" name="recommend" value="no" /> No
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section">
+        <h2>💡 Suggestions</h2>
+
+        <label>What features would you like to see?</label>
+        <textarea rows="3"></textarea>
+
+        <label>Any other feedback?</label>
+        <textarea rows="3"></textarea>
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div class="footer-msg">
+      Thanks for helping us improve your learning experience! 💻🚀
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for your feedback!");
+    });
+  </script>
+</body>
+</html>

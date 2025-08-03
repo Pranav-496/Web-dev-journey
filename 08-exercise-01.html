@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>08-EXE</title>
+    </head>
+    <body>
+        <script>
+            product1 = {
+                name: 'socks',
+                price: 20
+            }
+            product2 = {
+                name : 'socks',
+                price: 20
+            }
+            function compareProducts(product1, product2) { // This function compares the prices of two products
+                if (product1.price < product2.price) {
+                    return `${product1.name} are cheaper than ${product2.name}`;
+                } else if (product1.price > product2.price) {
+                    return `${product1.name} is more expensive than ${product2.name}`;
+                } else {
+                    return `${product1.name} and ${product2.name} have the same price`;
+                }
+            }
+            const result = compareProducts(product1, product2);
+            console.log(result); // This will print the comparison result based on the prices of product1
+            function isSameProcut(product1, product2) { // This function checks if two products are the same
+                if (product1.name === product2.name && product1.price === product2.price) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            console.log(isSameProcut(product1, product2)); // This will print false as the products are different
+            let name = 'Pranav';
+            console.log(name.toLowerCase()); // This will print 'pranav' as it converts the string to lowercase
+            console.log(name.toUpperCase()); // This will print 'PRANAV' as it converts the string to uppercase
+            console.log(name.length); // This will print the length of the string 'Pranav' which is 6
+            console.log(name.charAt(0)); // This will print the first character of the string 'Pranav' which is 'P'
+            console.log(name.indexOf('a')); // This will print the index of the first occurrence    
+            console.log(name.lastIndexOf('a')); // This will print the index of the last occurrence of 'a' in 'Pranav'
+            console.log(name.includes('a')); // This will print true as 'a' is present in 'Pranav'
+            console.log(name.startsWith('P')); // This will print true as 'Pranav' starts with 'P'
+            console.log(name.endsWith('v')); // This will print true as 'Pranav ends with 'v'
+            console.log(name.slice(1, 4)); // This will print 'ran' as it slices the string from index 1 to 4
+            console.log(name.substring(1, 4)); // This will also print 'ran'
+            console.log(name.split('a')); // This will split the string 'Pranav' at 'a' and print ['Pr', 'nav'] 
+            console.log(name.replace('Pranav', 'Pranav Landge')); // This will replace 'Pranav' with 'Pranav Landge' in the string
+            console.log(name.trim()); // This will remove any leading or trailing whitespace from the string '
+            console.log(name.repeat(3)); // This will repeat the string 'Pranav' 3 times and print 'PranavPranavPranav'
+            console.log(name.search('a')); // This will search for 'a' in 'Pranav' and return the index of the first occurrence which is 2
+            console.log(name.match(/a/g)); // This will return an array of all occurrences of
+            console.log(name.match(/a/g).length); // This will print the number of occurrences of 'a' in 'Pranav', which is 2
+            console.log(name.localeCompare('Pranav')); // This will compare 'Pranav' with 'Pranav' and return 0 as they are the same
+        </script>
+    </body>
+</html>

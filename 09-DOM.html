@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <button>hello</button>
+        <button class="but2">hello2</button>
+
+        <script>
+            console.log(document.querySelector('button').innerHTML);  // this selects the first button element and logs its inner HTML
+            console.log(document.querySelector('button.but2').innerHTML);  // this selects the first button element and logs its inner HTML
+            const buttonEle = document.querySelector('.but2'); // this selects the button element with class 'but2'
+            console.log(buttonEle); // this logs the button element with class 'but2'  
+            console.log(document.querySelector('button').innerHTML = 'Good'); // this changes the inner HTML of the button to 'Good'
+            /*
+            console.log(document.title);            
+            document.title = 'changed title'; // this changes the title of the document
+            
+            console.log(document.body); // this logs the body of the document
+            console.log(typeof document.body); // this logs the type of the body, which is an object
+            console.log(document.body.innerHTML); // this logs the inner HTML of the body
+            document.body.innerHTML = '<button>Good</button>'; // this changes the inner HTML of the body
+            */    
+            /*document.body.innerHTML = 'Hello';
+            document.title = 'Good job!';*/
+        </script>
+    </body>
+</html>

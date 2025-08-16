@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <button>9a</button>
+
+    <button class="9b">9b</button>
+
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: heads';
+    ">heads</button>
+
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
+
+    <input placeholder="Name" class="js-name-input"
+    onkeydown="
+        if (event.key === 'Enter') {
+          // Optional: instead of duplicating this code,
+          // you could also put it in a function.
+          printOutput();
+        }">
+
+    <button onclick="
+    printOutput();
+    ">Submit</button>
+
+    <p class="js-submit-button-output"></p>
+    <button onclick="
+      // Display the cart quantity on the page
+      // instead of in the console.
+      displayCartQuantity();
+    ">Show Quantity</button>
+
+    <button onclick="
+      updateCartQuantity(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+      updateCartQuantity(2);
+    ">+2</button>
+
+    <button onclick="
+      updateCartQuantity(3);
+    ">+3</button>
+
+    <button onclick="
+      updateCartQuantity(4);
+    ">+4</button>
+
+    <button onclick="
+      updateCartQuantity(5);
+    ">+5</button>
+
+    <button onclick="
+      updateCartQuantity(-1);
+    ">Remove from cart</button>
+
+    <button onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
+
+    <button onclick="
+      updateCartQuantity(-3);
+    ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+
+      // Display the cart quantity after updating.
+      displayCartQuantity();
+    ">Reset Cart</button>
+
+    <!-- Create an element to display the cart quantity. -->
+    <p class="js-cart-quantity"></p>
+    <body>
+    <!-- Create an element to display the calculation. -->
+    <p class="js-calculation"></p>
+
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+
+    <script>
+        function printOutput() {
+            const inputElement = document.querySelector('.js-name-input');
+          document.querySelector('.js-submit-button-output')
+            .innerText = `Your name is: ${inputElement.value}`;
+        }
+        document.title = '09-EXE'
+        console.log(document.querySelector('Button'));
+        document.querySelector('Button').innerHTML = '9b Done !';
+         let cartQuantity = 0;
+
+      // Display the cart quantity when the page loads.
+      displayCartQuantity();
+
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full');
+          return;
+        }
+
+        if (cartQuantity + change < 0) {
+          alert('Not enough items in the cart');
+          return;
+        }
+
+        cartQuantity += change;
+
+        // Display the cart quantity after updating.
+        displayCartQuantity();
+      }
+
+      function displayCartQuantity() {
+        document.querySelector('.js-cart-quantity')
+          .innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+      let calculation = localStorage.getItem('calculation') || '';
+
+      // Display the calculation when the page first loads.
+      displayCalculation();
+
+      function updateCalculation(value) {
+        calculation += value;
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      }
+
+      function displayCalculation() {
+        document.querySelector('.js-calculation')
+          .innerHTML = calculation;
+      }
+    </script>
+</body>
+
+</html>

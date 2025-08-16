@@ -8,7 +8,35 @@
 <body>
     <p>YouTube Subscribe Button</p>
     <button class="sub" , onclick="subscribe()">Subscribe</button>
+    <p>Amazon shipping calculator</p>
+    <input placeholder="cost of order" class="js-cost-input" onkeydown="
+        handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+
     <script>
+        String(25)
+        console.log('25'-5); // type coercion -20
+        console.log('25'+5); // type coercion - 255
+         
+        function handleCostKeydown(event) {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+        }
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+
+        }
         function subscribe() { // This function will be called when the button is clicked
             // This function will toggle the button text between 'Subscribe' and 'Subscribed'
             const buttonEle = document.querySelector('.sub')

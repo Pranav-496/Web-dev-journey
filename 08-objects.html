@@ -7,7 +7,7 @@
 
 <body>
     <script>
-        /*const product = {
+        const product = {
             name: 'socks',
             price: 20
         };
@@ -20,16 +20,16 @@
         console.log(product);
 
         product.newProperty = true;
-        console.log(product); */
+        console.log(product);
 
-      /*  const product2 = {
+        const product2 = {
             name: 'shirt',
             'delivery-time': '1 day',
             rating: {          //This is called nested object
                 stars: 4.5,
                 count: 87
             },
-            fun: function func1(){   //function inside object = method
+            fun: function func1() {   //function inside object = method
                 console.log('Function inside object');
             }
         };
@@ -46,7 +46,7 @@
         console.log(typeof console.log); // this will print 'function'
         console.log(JSON.stringify(product2)); //Converting JS object to JSON & prints the object product2 except the functions in it at JSON do not support functions
         const jsonString = JSON.stringify(product2);
-        JSON.parse(jsonString);//Again converting JSON object to JS object*/
+        JSON.parse(jsonString);//Again converting JSON object to JS object
         console.log('hello'.length); //This is a string method, it will print the length of the string 'hello' which is 5
         console.log('hello'.toUpperCase()); //This is a string method, it will
 
@@ -74,19 +74,19 @@
         console.log(price); //This will print 799
 
         const object5 = {
-           // message: message
-           message //This is called shorthand property name, it will create a property with the same name as the variable
-           ,/*method: function func1() {
+            // message: message
+            message //This is called shorthand property name, it will create a property with the same name as the variable
+            ,/*method: function func1() {
                 console.log('This is a method inside object5');
             }*/
-            methdo(){
+            methdo() {
                 console.log('This is a method inside object5');
             }
         };
         console.log(object5); //This will print { message: 'Good job!' }
         console.method();
 
-</script>
+    </script>
 </body>
 
 </html>

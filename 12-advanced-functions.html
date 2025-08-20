@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advanced Functions</title>
+    </head>
+    <body>
+        <script>
+            /*function greeting() {
+                console.log('Hello, World!');
+            }
+            greeting(); // Call the function to execute it, this states that the functions are values
+            const function1 = function() {
+                console.log('Hello, World! 2');
+            };
+            
+            console.log(function1); // This will log the function definition
+            console.log(typeof function1); // This will log 'function'
+            function1(); // Call the function to execute it
+            
+            const object1 = {
+                num: 2,
+                fun: function greeting(){
+                    console.log('Namaste');
+                }
+            };
+            object1.fun(); // when a function saved inside an object it is called a method
+             
+            function display(param) {
+                console.log(param);
+            }
+
+            display('Pranav === Hitler');
+
+            function run(param){
+                param(); // the param variable is treated as function as it is argumented as a function
+            }
+            run(function() {
+                console.log('hello4'); // passing a function to a function as parameter 
+            })*/
+            setTimeout(function(){
+                console.log('timeout');
+            },3000) // the first parameter is a function and second is a time (in miliseconds) after which is should run
+        
+            // this doesnt blockthe code for timeout next lines run - asynchronous code
+            setInterval(function(){ 
+                console.log('interval');
+            },1000) // this will run the function every 1 second
+        
+        </script>
+    </body>
+</html>

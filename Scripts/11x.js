@@ -1,11 +1,5 @@
 // When loading the page, load from localStorage.
-const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
-  name: 'make dinner',
-  dueDate: '2022-12-22'
-}, {
-  name: 'wash dishes',
-  dueDate: '2022-12-22'
-}];
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 
 renderTodoList();
 

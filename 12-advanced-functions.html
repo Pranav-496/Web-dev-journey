@@ -37,7 +37,7 @@
             run(function() {
                 console.log('hello4'); // passing a function to a function as parameter 
             })*/
-            setTimeout(function(){
+            /*setTimeout(function(){
                 console.log('timeout');
             },3000) // the first parameter is a function and second is a time (in miliseconds) after which is should run
         
@@ -45,7 +45,15 @@
             setInterval(function(){ 
                 console.log('interval');
             },1000) // this will run the function every 1 second
-        
+            */
+
+            [
+                'tea',
+                'coffee',
+                'milk'
+            ].forEach(function(item, index) {
+                console.log(index + ' : ' + item);
+            }); // this is an anonymous function that is passed to forEach method of array
         </script>
     </body>
 </html>
